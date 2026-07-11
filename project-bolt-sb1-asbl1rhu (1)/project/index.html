@@ -2,25 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F97316'%3E%3Cpath d='M16 2v6h6'/%3E%3Cpath d='M8 22V12'/%3E%3Cpath d='M4 22V4a2 2 0 0 1 2-2h8l6 6v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z'/%3E%3C/svg%3E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="FoodFiesta — Discover delicious food near you. Order from your favorite local restaurants with fast delivery and exclusive deals." />
     <title>FoodFiesta — Discover Delicious Food Near You</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
   </head>
   <body class="page" data-page="Home">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div id="navbar-host"></div>
+
+    <!-- ===== Navbar ===== -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="logo" href="index.html" aria-label="FoodFiesta home">
+          <span class="logo__mark" id="navLogo"></span>
+          <span class="logo__text">Food<span>Fiesta</span><span class="logo__tag">Eat. Enjoy. Repeat.</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link is-active" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="pages/restaurants.html">Restaurants</a>
+          <a class="nav-link" href="pages/offers.html">Offers</a>
+          <a class="nav-link" href="pages/community.html">Reviews</a>
+        </nav>
+        <div class="navbar__actions">
+          <button class="btn-icon" aria-label="Search" id="navSearchBtn"></button>
+          <a class="btn-icon navbar__cart" href="pages/cart.html" aria-label="Cart" id="cartLink"></a>
+          <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer" id="navHamburger"></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Mobile Drawer ===== -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="drawer" id="navDrawer" aria-label="Mobile navigation">
+      <div class="drawer__header">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" id="drawerLogo"></span>
+          <span class="logo__text">Food<span>Fiesta</span></span>
+        </a>
+        <button class="modal__close drawer__close" aria-label="Close menu" id="drawerCloseBtn"></button>
+      </div>
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link is-active" href="index.html" aria-current="page"><span class="icon" id="drawerHomeIcon"></span><span>Home</span></a>
+        <a class="drawer__link" href="pages/restaurants.html"><span class="icon" id="drawerRestIcon"></span><span>Restaurants</span></a>
+        <a class="drawer__link" href="pages/offers.html"><span class="icon" id="drawerOffersIcon"></span><span>Offers</span></a>
+        <a class="drawer__link" href="pages/community.html"><span class="icon" id="drawerReviewsIcon"></span><span>Reviews</span></a>
+      </nav>
+      <div class="drawer__footer">
+        <a class="btn btn-outline btn-block" href="pages/cart.html" id="drawerCartBtn">View Cart</a>
+        <a class="btn btn-primary btn-block" href="pages/restaurants.html" id="drawerBrowseBtn">Browse Restaurants</a>
+      </div>
+    </aside>
 
     <main class="page-main" id="main">
-      <!-- Hero -->
+      <!-- ===== Hero ===== -->
       <section class="section hero-section">
         <div class="container">
           <div class="hero-grid">
@@ -30,16 +72,14 @@
               <p class="text-muted" style="font-size:var(--fs-body-lg);margin-top:16px;max-width:520px">Browse restaurants, discover new dishes, find exclusive deals, and order food in just a few taps. Your next great meal is closer than you think.</p>
               <form class="hero-search" id="heroSearchForm" style="margin-top:28px">
                 <div class="search-input search-input--lg">
-                  <span class="search-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                  </span>
+                  <span class="search-icon" id="heroSearchIcon"></span>
                   <input class="input" type="search" name="search" placeholder="Search restaurants, cuisines or dishes..." aria-label="Search restaurants, cuisines or dishes" />
                   <button class="btn btn-primary" type="submit">Search</button>
                 </div>
               </form>
               <div class="flex gap-3" style="flex-wrap:wrap;margin-top:24px">
-                <a class="btn btn-primary btn-lg" href="pages/restaurants.html">Browse Restaurants</a>
-                <a class="btn btn-outline btn-lg" href="pages/offers.html">Explore Offers</a>
+                <a class="btn btn-primary btn-lg" href="pages/restaurants.html" id="heroBrowseBtn">Browse Restaurants</a>
+                <a class="btn btn-outline btn-lg" href="pages/offers.html" id="heroOffersBtn">Explore Offers</a>
               </div>
               <div class="hero-stats" style="margin-top:40px">
                 <div class="hero-stat"><div class="hero-stat__num">200+</div><div class="hero-stat__label">Restaurants</div></div>
@@ -52,15 +92,11 @@
             <div class="hero-visual reveal">
               <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly prepared food spread" loading="eager" class="hero-visual__main" />
               <div class="hero-visual__card hero-visual__card--1">
-                <div class="hero-visual__icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 8h4l3 3v5a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                </div>
+                <div class="hero-visual__icon" id="heroCard1Icon"></div>
                 <div><div class="fw-semibold fs-small">Free delivery</div><div class="fs-caption text-tertiary">On your first order</div></div>
               </div>
               <div class="hero-visual__card hero-visual__card--2">
-                <div class="hero-visual__icon" style="background:var(--color-success-50);color:var(--color-success-600)">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <div class="hero-visual__icon" style="background:var(--color-success-50);color:var(--color-success-600)" id="heroCard2Icon"></div>
                 <div><div class="fw-semibold fs-small">Order placed</div><div class="fs-caption text-tertiary">Arriving in 25 min</div></div>
               </div>
             </div>
@@ -68,151 +104,168 @@
         </div>
       </section>
 
-      <!-- Categories -->
+      <!-- ===== Categories ===== -->
       <section class="section">
         <div class="container">
-          <div id="categoriesHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">Popular Categories</h2>
+              <p class="section-header__subtitle">Pick a craving and start exploring the best spots in town.</p>
+            </div>
+          </div>
           <div class="scroll-row" id="categoriesRow"></div>
         </div>
       </section>
 
-      <!-- Featured Restaurants -->
+      <!-- ===== Featured Restaurants ===== -->
       <section class="section" id="restaurants">
         <div class="container">
-          <div id="featuredHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">Featured Restaurants</h2>
+              <p class="section-header__subtitle">Hand-picked favorites loved by our community.</p>
+            </div>
+            <div class="section-header__action">
+              <a class="btn btn-text" href="pages/restaurants.html">View All <span class="icon" id="featArrow"></span></a>
+            </div>
+          </div>
           <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="featuredRestaurants" style="gap:24px"></div>
         </div>
       </section>
 
-      <!-- Popular Dishes -->
+      <!-- ===== Popular Dishes ===== -->
       <section class="section">
         <div class="container">
-          <div id="dishesHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">Popular Dishes</h2>
+              <p class="section-header__subtitle">What everyone is ordering right now.</p>
+            </div>
+            <div class="section-header__action">
+              <a class="btn btn-text" href="pages/restaurants.html">View All <span class="icon" id="dishArrow"></span></a>
+            </div>
+          </div>
           <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="popularDishes" style="gap:24px"></div>
         </div>
       </section>
 
-      <!-- Offers -->
+      <!-- ===== Offers ===== -->
       <section class="section">
         <div class="container">
-          <div id="offersHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">Today's Special Offers</h2>
+              <p class="section-header__subtitle">Save more on the food you love.</p>
+            </div>
+          </div>
           <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-3" id="offersGrid" style="gap:24px"></div>
         </div>
       </section>
 
-      <!-- Features -->
+      <!-- ===== Features ===== -->
       <section class="section" style="background:var(--color-bg-alt)">
         <div class="container">
-          <div id="featuresHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">Why Choose FoodFiesta</h2>
+              <p class="section-header__subtitle">We obsess over every detail so you can just enjoy the food.</p>
+            </div>
+          </div>
           <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="featuresGrid" style="gap:24px"></div>
         </div>
       </section>
 
-      <!-- Testimonials -->
+      <!-- ===== Testimonials ===== -->
       <section class="section">
         <div class="container">
-          <div id="testimonialsHeader"></div>
+          <div class="section-header reveal">
+            <div>
+              <h2 class="section-header__title">What Our Customers Say</h2>
+              <p class="section-header__subtitle">Real stories from real food lovers.</p>
+            </div>
+          </div>
           <div class="grid grid-cols-1 grid-md-cols-3" id="testimonialsGrid" style="gap:24px"></div>
         </div>
       </section>
 
-      <!-- Newsletter -->
+      <!-- ===== Newsletter ===== -->
       <section class="section">
         <div class="container">
-          <div class="newsletter-banner reveal" id="newsletterBanner"></div>
+          <div class="newsletter-banner reveal" id="newsletterBanner">
+            <div class="newsletter-banner__content">
+              <h2 style="font-size:var(--fs-h2);font-weight:700">Hungry for deals?</h2>
+              <p style="margin-top:8px;max-width:480px">Join our newsletter for exclusive offers, new restaurant alerts, and foodie inspiration delivered weekly.</p>
+            </div>
+            <form class="newsletter-banner__form" id="homeNewsletter">
+              <div class="search-input search-input--lg">
+                <span class="search-icon" id="newsIcon"></span>
+                <input class="input" type="email" name="email" placeholder="Enter your email" aria-label="Email address" required />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
-    <div id="footer-host"></div>
-
-    <script type="module" src="/assets/js/main.js"></script>
-    <script type="module">
-      import { CATEGORIES, RESTAURANTS, FOODS, OFFERS, FEATURES, TESTIMONIALS, IMAGES } from '/assets/js/data.js';
-      import { restaurantCard, foodCard, offerCard, featureCard, testimonialCard, categoryCard, sectionHeader, button } from '/assets/js/components.js';
-
-      const catHeader = document.getElementById('categoriesHeader');
-      if (catHeader) catHeader.innerHTML = sectionHeader({ title: 'Popular Categories', subtitle: 'Pick a craving and start exploring the best spots in town.' });
-
-      const catRow = document.getElementById('categoriesRow');
-      if (catRow) catRow.innerHTML = CATEGORIES.map(categoryCard).join('');
-
-      const featHeader = document.getElementById('featuredHeader');
-      if (featHeader) featHeader.innerHTML = sectionHeader({ title: 'Featured Restaurants', subtitle: 'Hand-picked favorites loved by our community.', action: { label: 'View All', variant: 'text', icon: 'arrowRight', href: 'pages/restaurants.html' } });
-
-      const featGrid = document.getElementById('featuredRestaurants');
-      if (featGrid) featGrid.innerHTML = RESTAURANTS.slice(0, 8).map(r => restaurantCard(r)).join('');
-
-      const dishHeader = document.getElementById('dishesHeader');
-      if (dishHeader) dishHeader.innerHTML = sectionHeader({ title: 'Popular Dishes', subtitle: 'What everyone is ordering right now.', action: { label: 'View All', variant: 'text', icon: 'arrowRight', href: 'pages/restaurants.html' } });
-
-      const dishGrid = document.getElementById('popularDishes');
-      if (dishGrid) dishGrid.innerHTML = FOODS.slice(0, 8).map(f => foodCard(f)).join('');
-
-      const offHeader = document.getElementById('offersHeader');
-      if (offHeader) offHeader.innerHTML = sectionHeader({ title: "Today's Special Offers", subtitle: 'Save more on the food you love.' });
-
-      const offGrid = document.getElementById('offersGrid');
-      if (offGrid) offGrid.innerHTML = OFFERS.slice(0, 3).map(offerCard).join('');
-
-      const feat2Header = document.getElementById('featuresHeader');
-      if (feat2Header) feat2Header.innerHTML = sectionHeader({ title: 'Why Choose FoodFiesta', subtitle: 'We obsess over every detail so you can just enjoy the food.' });
-
-      const feat2Grid = document.getElementById('featuresGrid');
-      if (feat2Grid) feat2Grid.innerHTML = FEATURES.map(featureCard).join('');
-
-      const testHeader = document.getElementById('testimonialsHeader');
-      if (testHeader) testHeader.innerHTML = sectionHeader({ title: 'What Our Customers Say', subtitle: 'Real stories from real food lovers.' });
-
-      const testGrid = document.getElementById('testimonialsGrid');
-      if (testGrid) testGrid.innerHTML = TESTIMONIALS.map(testimonialCard).join('');
-
-      const newsBanner = document.getElementById('newsletterBanner');
-      if (newsBanner) newsBanner.innerHTML = `
-        <div class="newsletter-banner__content">
-          <h2 style="font-size:var(--fs-h2);font-weight:700">Hungry for deals?</h2>
-          <p class="text-muted" style="margin-top:8px;max-width:480px">Join our newsletter for exclusive offers, new restaurant alerts, and foodie inspiration delivered weekly.</p>
-        </div>
-        <form class="newsletter-banner__form" id="homeNewsletter">
-          <div class="search-input search-input--lg">
-            <span class="search-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </span>
-            <input class="input" type="email" name="email" placeholder="Enter your email" aria-label="Email address" required />
-            <button class="btn btn-primary" type="submit">Subscribe</button>
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="logo" href="index.html">
+              <span class="logo__mark" id="footerLogo"></span>
+              <span class="logo__text" style="color:#fff">Food<span>Fiesta</span></span>
+            </a>
+            <p class="footer__desc">Your favorite local restaurants, delivered fast and fresh. Discover delicious food, exclusive deals, and a community of food lovers — all in one place.</p>
+            <div class="footer__socials">
+              <a class="footer__social" href="#" aria-label="Facebook" id="socialFb"></a>
+              <a class="footer__social" href="#" aria-label="Twitter" id="socialTw"></a>
+              <a class="footer__social" href="#" aria-label="Instagram" id="socialIg"></a>
+              <a class="footer__social" href="#" aria-label="YouTube" id="socialYt"></a>
+            </div>
           </div>
-        </form>`;
+          <div>
+            <h4 class="footer__title">Quick Links</h4>
+            <ul class="footer__list">
+              <li><a href="pages/restaurants.html">Restaurants</a></li>
+              <li><a href="pages/offers.html">Deals & Offers</a></li>
+              <li><a href="pages/community.html">Community Reviews</a></li>
+              <li><a href="pages/cart.html">Your Cart</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <div class="footer__contact-item" id="footerAddr"></div>
+            <div class="footer__contact-item" id="footerPhone"></div>
+            <div class="footer__contact-item" id="footerMail"></div>
+            <div class="footer__contact-item" id="footerClock"></div>
+          </div>
+          <div>
+            <h4 class="footer__title">Newsletter</h4>
+            <p class="footer__desc" style="margin-top:0;margin-bottom:var(--sp-2)">Get the best deals and new restaurant updates in your inbox.</p>
+            <form class="footer__newsletter" id="footerNewsletter">
+              <input class="input" type="email" name="email" placeholder="Your email" aria-label="Email address" required />
+              <button class="btn btn-primary" type="submit" aria-label="Subscribe" id="footerNewsBtn"></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 FoodFiesta. Crafted with care. All rights reserved.</span>
+          <div class="footer__bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-      // Hero search → restaurants page
-      const heroForm = document.getElementById('heroSearchForm');
-      if (heroForm) {
-        heroForm.addEventListener('submit', e => {
-          e.preventDefault();
-          const q = heroForm.querySelector('input').value.trim();
-          window.location.href = 'pages/restaurants.html' + (q ? `?q=${encodeURIComponent(q)}` : '');
-        });
-      }
-
-      // Home newsletter
-      const homeNews = document.getElementById('homeNewsletter');
-      if (homeNews) {
-        homeNews.addEventListener('submit', e => {
-          e.preventDefault();
-          const email = homeNews.querySelector('input').value.trim();
-          if (email && /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
-            window.dispatchEvent(new CustomEvent('foodfiesta:toast', { detail: { title: 'Subscribed!', message: 'Welcome to the FoodFiesta newsletter.', type: 'success' } }));
-            homeNews.reset();
-          }
-        });
-      }
-
-      // Re-trigger reveal for dynamically injected content
-      requestAnimationFrame(() => {
-        document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
-          const r = el.getBoundingClientRect();
-          if (r.top < window.innerHeight) el.classList.add('is-visible');
-        });
-      });
-    </script>
+    <!-- ===== Scripts ===== -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pages/home.js"></script>
   </body>
 </html>

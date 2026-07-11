@@ -16,12 +16,109 @@
   </head>
   <body class="page" data-page="">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div id="navbar-host"></div>
+
+    <!-- ===== Navbar ===== -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="logo" href="../index.html" aria-label="FoodFiesta home">
+          <span class="logo__mark" id="navLogo"></span>
+          <span class="logo__text">Food<span>Fiesta</span><span class="logo__tag">Eat. Enjoy. Repeat.</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="restaurants.html">Restaurants</a>
+          <a class="nav-link" href="offers.html">Offers</a>
+          <a class="nav-link" href="community.html">Reviews</a>
+        </nav>
+        <div class="navbar__actions">
+          <button class="btn-icon" aria-label="Search" id="navSearchBtn"></button>
+          <a class="btn-icon navbar__cart" href="cart.html" aria-label="Cart" id="cartLink"></a>
+          <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer" id="navHamburger"></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Mobile Drawer ===== -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="drawer" id="navDrawer" aria-label="Mobile navigation">
+      <div class="drawer__header">
+        <a class="logo" href="../index.html">
+          <span class="logo__mark" id="drawerLogo"></span>
+          <span class="logo__text">Food<span>Fiesta</span></span>
+        </a>
+        <button class="modal__close drawer__close" aria-label="Close menu" id="drawerCloseBtn"></button>
+      </div>
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../index.html"><span class="icon" id="drawerHomeIcon"></span><span>Home</span></a>
+        <a class="drawer__link" href="restaurants.html"><span class="icon" id="drawerRestIcon"></span><span>Restaurants</span></a>
+        <a class="drawer__link" href="offers.html"><span class="icon" id="drawerOffersIcon"></span><span>Offers</span></a>
+        <a class="drawer__link" href="community.html"><span class="icon" id="drawerReviewsIcon"></span><span>Reviews</span></a>
+      </nav>
+      <div class="drawer__footer">
+        <a class="btn btn-outline btn-block" href="cart.html" id="drawerCartBtn">View Cart</a>
+        <a class="btn btn-primary btn-block" href="restaurants.html" id="drawerBrowseBtn">Browse Restaurants</a>
+      </div>
+    </aside>
+
     <main class="page-main" id="main">
       <div id="cartContent"></div>
     </main>
-    <div id="footer-host"></div>
-    <script type="module" src="../assets/js/main.js"></script>
-    <script type="module" src="../assets/js/pages/cart.js"></script>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="logo" href="../index.html">
+              <span class="logo__mark" id="footerLogo"></span>
+              <span class="logo__text" style="color:#fff">Food<span>Fiesta</span></span>
+            </a>
+            <p class="footer__desc">Your favorite local restaurants, delivered fast and fresh. Discover delicious food, exclusive deals, and a community of food lovers — all in one place.</p>
+            <div class="footer__socials">
+              <a class="footer__social" href="#" aria-label="Facebook" id="socialFb"></a>
+              <a class="footer__social" href="#" aria-label="Twitter" id="socialTw"></a>
+              <a class="footer__social" href="#" aria-label="Instagram" id="socialIg"></a>
+              <a class="footer__social" href="#" aria-label="YouTube" id="socialYt"></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__title">Quick Links</h4>
+            <ul class="footer__list">
+              <li><a href="restaurants.html">Restaurants</a></li>
+              <li><a href="offers.html">Deals & Offers</a></li>
+              <li><a href="community.html">Community Reviews</a></li>
+              <li><a href="cart.html">Your Cart</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer__title">Contact</h4>
+            <div class="footer__contact-item" id="footerAddr"></div>
+            <div class="footer__contact-item" id="footerPhone"></div>
+            <div class="footer__contact-item" id="footerMail"></div>
+            <div class="footer__contact-item" id="footerClock"></div>
+          </div>
+          <div>
+            <h4 class="footer__title">Newsletter</h4>
+            <p class="footer__desc" style="margin-top:0;margin-bottom:var(--sp-2)">Get the best deals and new restaurant updates in your inbox.</p>
+            <form class="footer__newsletter" id="footerNewsletter">
+              <input class="input" type="email" name="email" placeholder="Your email" aria-label="Email address" required />
+              <button class="btn btn-primary" type="submit" aria-label="Subscribe" id="footerNewsBtn"></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 FoodFiesta. Crafted with care. All rights reserved.</span>
+          <div class="footer__bottom-links">
+            <a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/icons.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/cart.js"></script>
   </body>
 </html>
