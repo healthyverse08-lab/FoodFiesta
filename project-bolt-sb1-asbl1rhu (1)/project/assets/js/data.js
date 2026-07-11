@@ -1,0 +1,439 @@
+/**
+ * FoodFiesta — App Data
+ * Centralized mock data for restaurants, foods, categories, offers, reviews.
+ * Shared across all pages. Image URLs are real Pexels food photos.
+ */
+
+export const IMAGES = {
+  hero: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900',
+  promoBanner: 'https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  promo1: 'https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=600',
+  promo2: 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600',
+  promo3: 'https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600',
+  promo4: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=600',
+  promo5: 'https://images.pexels.com/photos/2664216/pexels-photo-2664216.jpeg?auto=compress&cs=tinysrgb&w=600',
+  gallery1: 'https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800',
+  gallery2: 'https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=800',
+  gallery3: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800',
+  gallery4: 'https://images.pexels.com/photos/327135/pexels-photo-327135.jpeg?auto=compress&cs=tinysrgb&w=800',
+  emptyCart: 'https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?auto=compress&cs=tinysrgb&w=400',
+};
+
+export const CATEGORIES = [
+  { id: 'pizza', name: 'Pizza', icon: 'pizza', count: 11, image: 'https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'burger', name: 'Burger', icon: 'burger', count: 8, image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'momo', name: 'Momo', icon: 'momo', count: 8, image: 'https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'biryani', name: 'Biryani', icon: 'biryani', count: 4, image: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'sushi', name: 'Sushi', icon: 'sushi', count: 4, image: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'healthy', name: 'Healthy', icon: 'leaf', count: 5, image: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'desserts', name: 'Desserts', icon: 'cake', count: 5, image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600' },
+  { id: 'drinks', name: 'Drinks', icon: 'drink', count: 3, image: 'https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg?auto=compress&cs=tinysrgb&w=600' },
+];
+
+export const RESTAURANTS = [
+  {
+    id: 'bella-italia',
+    name: 'Bella Italia',
+    cuisine: 'Italian · Pizza',
+    cuisines: ['pizza'],
+    rating: 4.7,
+    reviewCount: 1284,
+    deliveryTime: 25,
+    deliveryFee: 2.99,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/1527353/pexels-photo-1527353.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: '20% OFF',
+    open: true,
+    veg: false,
+    description: 'Authentic Italian wood-fired pizzas, handmade pasta, and classic desserts made with ingredients imported straight from Italy.',
+    address: '24 Marina Boulevard, San Francisco, CA 94123',
+    phone: '+1 (415) 555-0182',
+    hours: '11:00 AM – 11:00 PM',
+    services: ['Delivery', 'Takeaway', 'Dine-In', 'Contactless Delivery'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'burger-hub',
+    name: 'Burger Hub',
+    cuisine: 'American · Burger',
+    cuisines: ['burger'],
+    rating: 4.5,
+    reviewCount: 982,
+    deliveryTime: 18,
+    deliveryFee: 1.99,
+    priceLevel: 1,
+    cover: 'https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Free Delivery',
+    open: true,
+    veg: false,
+    description: 'Juicy gourmet burgers stacked with premium beef, melted cheese, and house-made sauces. Crispy fries on the side.',
+    address: '512 Oak Street, Austin, TX 78701',
+    phone: '+1 (512) 555-0147',
+    hours: '10:00 AM – 12:00 AM',
+    services: ['Delivery', 'Takeaway', 'Dine-In'],
+    payment: ['Cash', 'Card', 'eWallet', 'Online Banking'],
+  },
+  {
+    id: 'himalayan-momo-house',
+    name: 'Himalayan Momo House',
+    cuisine: 'Nepali · Momo',
+    cuisines: ['momo'],
+    rating: 4.8,
+    reviewCount: 1567,
+    deliveryTime: 22,
+    deliveryFee: 1.49,
+    priceLevel: 1,
+    cover: 'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Buy 1 Get 1',
+    open: true,
+    veg: true,
+    description: 'Traditional Himalayan steamed and fried momos with authentic spicy chutney. A local favorite for a reason.',
+    address: '78 Jackson Avenue, Queens, NY 11372',
+    phone: '+1 (718) 555-0193',
+    hours: '11:00 AM – 10:00 PM',
+    services: ['Delivery', 'Takeaway', 'Contactless Delivery'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'tokyo-sushi',
+    name: 'Tokyo Sushi',
+    cuisine: 'Japanese · Sushi',
+    cuisines: ['sushi'],
+    rating: 4.6,
+    reviewCount: 2043,
+    deliveryTime: 30,
+    deliveryFee: 3.49,
+    priceLevel: 3,
+    cover: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: '15% OFF',
+    open: true,
+    veg: false,
+    description: 'Premium sushi crafted by master chefs using daily-sourced fish. Omakase sets, nigiri, and creative rolls.',
+    address: '300 Pine Street, Seattle, WA 98101',
+    phone: '+1 (206) 555-0168',
+    hours: '12:00 PM – 11:00 PM',
+    services: ['Delivery', 'Takeaway', 'Dine-In'],
+    payment: ['Card', 'eWallet', 'Online Banking'],
+  },
+  {
+    id: 'spice-garden',
+    name: 'Spice Garden',
+    cuisine: 'Indian · Biryani',
+    cuisines: ['biryani'],
+    rating: 4.4,
+    reviewCount: 1102,
+    deliveryTime: 35,
+    deliveryFee: 2.49,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Student Discount',
+    open: true,
+    veg: true,
+    description: 'Fragrant dum biryani, rich curries, and tandoori specialties from North and South India. Generous portions.',
+    address: '145 Devon Avenue, Chicago, IL 60622',
+    phone: '+1 (312) 555-0171',
+    hours: '11:00 AM – 11:00 PM',
+    services: ['Delivery', 'Takeaway', 'Dine-In', 'Contactless Delivery'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'green-bowl',
+    name: 'Green Bowl',
+    cuisine: 'Healthy · Salads',
+    cuisines: ['healthy'],
+    rating: 4.5,
+    reviewCount: 768,
+    deliveryTime: 20,
+    deliveryFee: 2.99,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/1392252/pexels-photo-1392252.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Free Delivery',
+    open: true,
+    veg: true,
+    description: 'Fresh superfood salads, grain bowls, cold-pressed juices, and guilt-free desserts. Eat clean without compromise.',
+    address: '88 Market Street, Portland, OR 97201',
+    phone: '+1 (503) 555-0155',
+    hours: '8:00 AM – 9:00 PM',
+    services: ['Delivery', 'Takeaway', 'Contactless Delivery'],
+    payment: ['Card', 'eWallet', 'Online Banking'],
+  },
+  {
+    id: 'pizza-corner',
+    name: 'Pizza Corner',
+    cuisine: 'Italian · Pizza',
+    cuisines: ['pizza'],
+    rating: 4.3,
+    reviewCount: 645,
+    deliveryTime: 28,
+    deliveryFee: 0,
+    priceLevel: 1,
+    cover: 'https://images.pexels.com/photos/6453601/pexels-photo-6453601.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Free Delivery',
+    open: false,
+    veg: false,
+    description: 'NY-style thin crust pizzas, loaded calzones, and garlic knots. Family combos for every appetite.',
+    address: '932 Broadway, Nashville, TN 37203',
+    phone: '+1 (615) 555-0139',
+    hours: '11:00 AM – 12:00 AM',
+    services: ['Delivery', 'Takeaway', 'Dine-In'],
+    payment: ['Cash', 'Card'],
+  },
+  {
+    id: 'urban-cafe',
+    name: 'Urban Café',
+    cuisine: 'Café · Desserts',
+    cuisines: ['desserts', 'drinks'],
+    rating: 4.6,
+    reviewCount: 893,
+    deliveryTime: 15,
+    deliveryFee: 1.99,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Weekend Special',
+    open: true,
+    veg: true,
+    description: 'Artisan coffee, freshly baked pastries, gourmet sandwiches, and decadent cheesecakes in a cozy setting.',
+    address: '55 Harbor Drive, Boston, MA 02110',
+    phone: '+1 (617) 555-0124',
+    hours: '7:00 AM – 10:00 PM',
+    services: ['Delivery', 'Takeaway', 'Dine-In'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'bbq-nation',
+    name: 'BBQ Nation',
+    cuisine: 'American · BBQ',
+    cuisines: ['burger'],
+    rating: 4.5,
+    reviewCount: 1124,
+    deliveryTime: 40,
+    deliveryFee: 3.99,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: '25% OFF',
+    open: true,
+    veg: false,
+    description: 'Slow-smoked brisket, pulled pork, ribs, and Southern sides. Pitmaster quality delivered to your door.',
+    address: '740 Grady Avenue, Dallas, TX 75201',
+    phone: '+1 (214) 555-0188',
+    hours: '12:00 PM – 11:00 PM',
+    services: ['Delivery', 'Takeaway', 'Dine-In'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'himalayan-grill',
+    name: 'Himalayan Grill',
+    cuisine: 'Nepali · Indo-Chinese',
+    cuisines: ['momo'],
+    rating: 4.4,
+    reviewCount: 532,
+    deliveryTime: 26,
+    deliveryFee: 1.99,
+    priceLevel: 1,
+    cover: 'https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Buy 1 Get 1',
+    open: true,
+    veg: false,
+    description: 'Bold Himalayan flavors with smoky grills, fiery chowmein, and thali platters. A taste of the mountains.',
+    address: '21 Elmhurst Avenue, Queens, NY 11373',
+    phone: '+1 (718) 555-0177',
+    hours: '11:00 AM – 10:30 PM',
+    services: ['Delivery', 'Takeaway'],
+    payment: ['Cash', 'Card', 'eWallet'],
+  },
+  {
+    id: 'fresh-bites',
+    name: 'Fresh Bites',
+    cuisine: 'Healthy · Bowls',
+    cuisines: ['healthy'],
+    rating: 4.7,
+    reviewCount: 689,
+    deliveryTime: 19,
+    deliveryFee: 2.49,
+    priceLevel: 2,
+    cover: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: '10% OFF',
+    open: true,
+    veg: true,
+    description: 'Wholesome poke bowls, wraps, smoothies, and protein plates. Fuel your day with fresh, balanced meals.',
+    address: '140 Larkin Street, San Francisco, CA 94102',
+    phone: '+1 (415) 555-0163',
+    hours: '9:00 AM – 9:00 PM',
+    services: ['Delivery', 'Takeaway', 'Contactless Delivery'],
+    payment: ['Card', 'eWallet'],
+  },
+  {
+    id: 'taste-express',
+    name: 'Taste Express',
+    cuisine: 'Multi-Cuisine',
+    cuisines: ['burger', 'drinks'],
+    rating: 4.2,
+    reviewCount: 421,
+    deliveryTime: 32,
+    deliveryFee: 1.49,
+    priceLevel: 1,
+    cover: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800',
+    logo: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=120',
+    offer: 'Free Delivery',
+    open: true,
+    veg: false,
+    description: 'Everything you crave under one roof — pizzas, burgers, curries, and shakes. Fast, filling, affordable.',
+    address: '611 Congress Avenue, Austin, TX 78701',
+    phone: '+1 (512) 555-0112',
+    hours: '10:00 AM – 12:00 AM',
+    services: ['Delivery', 'Takeaway'],
+    payment: ['Cash', 'Card', 'eWallet', 'Online Banking'],
+  },
+];
+
+export const FOODS = [
+  // Bella Italia — Pizza & Pasta
+  { id: 'margherita-pizza', name: 'Margherita Pizza', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 12.99, rating: 4.8, prepTime: 18, veg: true, chefChoice: true, image: 'https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Classic wood-fired pizza with fresh mozzarella, basil, and San Marzano tomato sauce.', calories: 285, protein: 12, carbs: 36, fat: 10, fiber: 2, sodium: 580, ingredients: ['Fresh Mozzarella', 'Tomato Sauce', 'Basil', 'Olive Oil', 'Italian Herbs'] },
+  { id: 'pepperoni-pizza', name: 'Pepperoni Pizza', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 14.99, rating: 4.7, prepTime: 20, veg: false, image: 'https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Loaded with spicy pepperoni and double cheese on a hand-tossed crust.', calories: 320, protein: 14, carbs: 36, fat: 14, fiber: 2, sodium: 720, ingredients: ['Pepperoni', 'Mozzarella', 'Tomato Sauce', 'Oregano'] },
+  { id: 'alfredo-pasta', name: 'Chicken Alfredo', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 13.49, rating: 4.6, prepTime: 22, veg: false, image: 'https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Creamy fettuccine Alfredo with grilled chicken and parmesan.', calories: 540, protein: 28, carbs: 58, fat: 22, fiber: 3, sodium: 690, ingredients: ['Fettuccine', 'Grilled Chicken', 'Parmesan', 'Cream', 'Garlic'] },
+  { id: 'garlic-bread', name: 'Garlic Bread', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 5.99, rating: 4.5, prepTime: 10, veg: true, image: 'https://images.pexels.com/photos/13062441/pexels-photo-13062441.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Toasted baguette with garlic butter and melted mozzarella.', calories: 220, protein: 6, carbs: 30, fat: 9, fiber: 1, sodium: 420, ingredients: ['Baguette', 'Garlic Butter', 'Mozzarella', 'Parsley'] },
+
+  // Burger Hub — Burgers & Sides
+  { id: 'chicken-burger', name: 'Chicken Burger', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 9.99, rating: 4.6, prepTime: 15, veg: false, chefChoice: true, image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crispy chicken fillet, lettuce, pickles, and house sauce in a brioche bun.', calories: 520, protein: 28, carbs: 40, fat: 26, fiber: 2, sodium: 820, ingredients: ['Chicken Fillet', 'Brioche Bun', 'Lettuce', 'Pickles', 'House Sauce'] },
+  { id: 'double-cheese-burger', name: 'Double Cheese Burger', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 11.99, rating: 4.7, prepTime: 16, veg: false, image: 'https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Two beef patties, double cheddar, caramelized onions, and smoky BBQ sauce.', calories: 740, protein: 42, carbs: 42, fat: 40, fiber: 2, sodium: 1040, ingredients: ['Beef Patty', 'Cheddar', 'Onions', 'BBQ Sauce', 'Sesame Bun'] },
+  { id: 'crispy-fries', name: 'Crispy Fries', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 3.99, rating: 4.4, prepTime: 8, veg: true, image: 'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Golden crispy fries seasoned with sea salt and herbs.', calories: 365, protein: 4, carbs: 48, fat: 17, fiber: 4, sodium: 380, ingredients: ['Potatoes', 'Sea Salt', 'Herbs'] },
+
+  // Himalayan Momo House — Momos
+  { id: 'veg-momo', name: 'Veg Momo', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', category: 'momo', price: 7.99, rating: 4.8, prepTime: 14, veg: true, chefChoice: true, image: 'https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Steamed dumplings filled with seasoned vegetables, served with spicy chutney.', calories: 240, protein: 8, carbs: 38, fat: 6, fiber: 3, sodium: 410, ingredients: ['Cabbage', 'Carrot', 'Ginger', 'Garlic', 'Dough'] },
+  { id: 'chicken-momo', name: 'Chicken Momo', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', category: 'momo', price: 8.99, rating: 4.9, prepTime: 15, veg: false, image: 'https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Juicy steamed chicken momos with authentic Himalayan spicy achar.', calories: 290, protein: 16, carbs: 36, fat: 8, fiber: 2, sodium: 480, ingredients: ['Minced Chicken', 'Onion', 'Coriander', 'Spices'] },
+  { id: 'fried-momo', name: 'Fried Chicken Momo', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', category: 'momo', price: 9.49, rating: 4.7, prepTime: 16, veg: false, image: 'https://images.pexels.com/photos/5470603/pexels-photo-5470603.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crispy fried momos stuffed with spiced chicken and herbs.', calories: 340, protein: 15, carbs: 34, fat: 14, fiber: 2, sodium: 520, ingredients: ['Chicken', 'Onion', 'Garlic', 'Spices'] },
+
+  // Spice Garden — Biryani & Curry
+  { id: 'chicken-biryani', name: 'Chicken Biryani', restaurant: 'Spice Garden', restaurantId: 'spice-garden', category: 'biryani', price: 11.99, rating: 4.7, prepTime: 25, veg: false, chefChoice: true, image: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Fragrant basmati rice layered with spiced chicken, saffron, and fried onions.', calories: 620, protein: 28, carbs: 72, fat: 22, fiber: 4, sodium: 920, ingredients: ['Basmati Rice', 'Chicken', 'Saffron', 'Fried Onions', 'Biryani Masala'] },
+  { id: 'veg-biryani', name: 'Veg Biryani', restaurant: 'Spice Garden', restaurantId: 'spice-garden', category: 'biryani', price: 9.99, rating: 4.5, prepTime: 22, veg: true, image: 'https://images.pexels.com/photos/7469285/pexels-photo-7469285.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Aromatic rice with mixed vegetables, paneer, and traditional spices.', calories: 480, protein: 12, carbs: 68, fat: 16, fiber: 6, sodium: 740, ingredients: ['Basmati Rice', 'Mixed Vegetables', 'Paneer', 'Spices'] },
+
+  // Tokyo Sushi — Sushi
+  { id: 'california-roll', name: 'California Roll', restaurant: 'Tokyo Sushi', restaurantId: 'tokyo-sushi', category: 'sushi', price: 10.99, rating: 4.6, prepTime: 12, veg: false, chefChoice: true, image: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crab, avocado, and cucumber wrapped in rice and nori. 8 pieces.', calories: 255, protein: 9, carbs: 38, fat: 7, fiber: 2, sodium: 590, ingredients: ['Sushi Rice', 'Crab', 'Avocado', 'Cucumber', 'Nori'] },
+  { id: 'salmon-nigiri', name: 'Salmon Nigiri', restaurant: 'Tokyo Sushi', restaurantId: 'tokyo-sushi', category: 'sushi', price: 12.49, rating: 4.8, prepTime: 10, veg: false, image: 'https://images.pexels.com/photos/858501/pexels-photo-858501.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Fresh salmon over hand-pressed rice. 6 pieces.', calories: 210, protein: 12, carbs: 28, fat: 5, fiber: 1, sodium: 320, ingredients: ['Sushi Rice', 'Fresh Salmon', 'Wasabi'] },
+
+  // Green Bowl — Healthy
+  { id: 'caesar-salad', name: 'Caesar Salad', restaurant: 'Green Bowl', restaurantId: 'green-bowl', category: 'healthy', price: 8.99, rating: 4.5, prepTime: 10, veg: true, chefChoice: true, image: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crisp romaine, parmesan, croutons, and classic Caesar dressing.', calories: 280, protein: 8, carbs: 18, fat: 20, fiber: 4, sodium: 520, ingredients: ['Romaine', 'Parmesan', 'Croutons', 'Caesar Dressing'] },
+  { id: 'quinoa-bowl', name: 'Quinoa Power Bowl', restaurant: 'Green Bowl', restaurantId: 'green-bowl', category: 'healthy', price: 10.49, rating: 4.6, prepTime: 12, veg: true, image: 'https://images.pexels.com/photos/7660433/pexels-photo-7660433.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Quinoa, chickpeas, avocado, roasted veggies, and tahini drizzle.', calories: 420, protein: 16, carbs: 52, fat: 18, fiber: 10, sodium: 380, ingredients: ['Quinoa', 'Chickpeas', 'Avocado', 'Tahini', 'Roasted Veggies'] },
+
+  // Urban Café — Desserts & Drinks
+  { id: 'chocolate-cake', name: 'Chocolate Cake', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'desserts', price: 6.99, rating: 4.8, prepTime: 8, veg: true, chefChoice: true, image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Rich molten chocolate cake with a fudgy center and cocoa dusting.', calories: 480, protein: 6, carbs: 62, fat: 24, fiber: 3, sodium: 340, ingredients: ['Dark Chocolate', 'Butter', 'Flour', 'Sugar', 'Eggs'] },
+  { id: 'cheesecake', name: 'New York Cheesecake', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'desserts', price: 7.49, rating: 4.7, prepTime: 8, veg: true, image: 'https://images.pexels.com/photos/4040692/pexels-photo-4040692.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Creamy classic cheesecake on a buttery graham crust.', calories: 410, protein: 7, carbs: 38, fat: 26, fiber: 1, sodium: 300, ingredients: ['Cream Cheese', 'Graham Crust', 'Vanilla', 'Sour Cream'] },
+  { id: 'fresh-smoothie', name: 'Fresh Smoothie', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'drinks', price: 5.99, rating: 4.6, prepTime: 6, veg: true, image: 'https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Berry banana smoothie blended with yogurt and honey.', calories: 220, protein: 6, carbs: 44, fat: 3, fiber: 5, sodium: 80, ingredients: ['Mixed Berries', 'Banana', 'Yogurt', 'Honey'] },
+  { id: 'iced-latte', name: 'Iced Caramel Latte', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'drinks', price: 4.99, rating: 4.7, prepTime: 5, veg: true, image: 'https://images.pexels.com/photos/4869289/pexels-photo-4869289.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Espresso over ice with milk and caramel syrup.', calories: 180, protein: 6, carbs: 26, fat: 5, fiber: 0, sodium: 120, ingredients: ['Espresso', 'Milk', 'Caramel', 'Ice'] },
+
+  // BBQ Nation — BBQ Platters
+  { id: 'bbq-platter', name: 'BBQ Mixed Platter', restaurant: 'BBQ Nation', restaurantId: 'bbq-nation', category: 'burger', price: 18.99, rating: 4.7, prepTime: 30, veg: false, chefChoice: true, image: 'https://images.pexels.com/photos/9983077/pexels-photo-9983077.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Smoked brisket, pulled pork, ribs, and sides. A full BBQ experience.', calories: 980, protein: 58, carbs: 52, fat: 60, fiber: 4, sodium: 1280, ingredients: ['Brisket', 'Pulled Pork', 'Ribs', 'BBQ Sauce', 'Coleslaw'] },
+
+  // Fresh Bites — Healthy Bowls
+  { id: 'poke-bowl', name: 'Salmon Poke Bowl', restaurant: 'Fresh Bites', restaurantId: 'fresh-bites', category: 'healthy', price: 12.99, rating: 4.8, prepTime: 12, veg: false, image: 'https://images.pexels.com/photos/842545/pexels-photo-842545.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Marinated salmon, edamame, mango, and rice with ponzu dressing.', calories: 460, protein: 26, carbs: 54, fat: 16, fiber: 5, sodium: 480, ingredients: ['Salmon', 'Rice', 'Edamame', 'Mango', 'Ponzu'] },
+
+  // Taste Express — Multi-Cuisine
+  { id: 'loaded-fries', name: 'Loaded Cheese Fries', restaurant: 'Taste Express', restaurantId: 'taste-express', category: 'burger', price: 6.49, rating: 4.3, prepTime: 10, veg: true, image: 'https://images.pexels.com/photos/6941051/pexels-photo-6941051.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Fries topped with cheese sauce, jalapeños, and sour cream.', calories: 520, protein: 10, carbs: 50, fat: 30, fiber: 4, sodium: 720, ingredients: ['Potatoes', 'Cheese Sauce', 'Jalapeños', 'Sour Cream'] },
+  { id: 'cola', name: 'Coca-Cola', restaurant: 'Taste Express', restaurantId: 'taste-express', category: 'drinks', price: 1.99, rating: 4.2, prepTime: 2, veg: true, image: 'https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Chilled 330ml classic Coca-Cola.', calories: 140, protein: 0, carbs: 39, fat: 0, fiber: 0, sodium: 45, ingredients: ['Carbonated Water', 'Sugar', 'Caramel Color'] },
+
+  // Extra menu items for restaurant details page
+  { id: 'hawaiian-pizza', name: 'Hawaiian Pizza', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 13.99, rating: 4.3, prepTime: 20, veg: false, image: 'https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Ham, pineapple, and mozzarella on a tomato base.', calories: 300, protein: 13, carbs: 38, fat: 11, fiber: 2, sodium: 680, ingredients: ['Ham', 'Pineapple', 'Mozzarella', 'Tomato Sauce'] },
+  { id: 'veg-pizza', name: 'Garden Veg Pizza', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 12.49, rating: 4.4, prepTime: 19, veg: true, image: 'https://images.pexels.com/photos/706344/pexels-photo-706344.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Bell peppers, mushrooms, olives, onions, and extra cheese.', calories: 260, protein: 10, carbs: 34, fat: 9, fiber: 3, sodium: 560, ingredients: ['Bell Peppers', 'Mushrooms', 'Olives', 'Onions', 'Mozzarella'] },
+  { id: 'mushroom-pasta', name: 'Mushroom Truffle Pasta', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 14.99, rating: 4.7, prepTime: 22, veg: true, image: 'https://images.pexels.com/photos/546945/pexels-photo-546945.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Creamy mushroom pasta with truffle oil and parmesan.', calories: 560, protein: 14, carbs: 60, fat: 28, fiber: 4, sodium: 640, ingredients: ['Pasta', 'Mushrooms', 'Truffle Oil', 'Cream', 'Parmesan'] },
+  { id: 'bruschetta', name: 'Bruschetta', restaurant: 'Bella Italia', restaurantId: 'bella-italia', category: 'pizza', price: 6.49, rating: 4.5, prepTime: 9, veg: true, image: 'https://images.pexels.com/photos/4109050/pexels-photo-4109050.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Toasted bread topped with tomatoes, basil, and olive oil.', calories: 180, protein: 5, carbs: 26, fat: 7, fiber: 2, sodium: 320, ingredients: ['Bread', 'Tomatoes', 'Basil', 'Olive Oil'] },
+
+  { id: 'spicy-burger', name: 'Spicy Jalapeño Burger', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 10.99, rating: 4.5, prepTime: 15, veg: false, image: 'https://images.pexels.com/photos/5639459/pexels-photo-5639459.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Beef patty with jalapeños, pepper jack, and chipotle mayo.', calories: 580, protein: 30, carbs: 42, fat: 30, fiber: 2, sodium: 920, ingredients: ['Beef Patty', 'Jalapeños', 'Pepper Jack', 'Chipotle Mayo'] },
+  { id: 'veggie-burger', name: 'Veggie Burger', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 8.99, rating: 4.3, prepTime: 14, veg: true, image: 'https://images.pexels.com/photos/7837694/pexels-photo-7837694.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Plant-based patty with avocado, lettuce, and tomato.', calories: 440, protein: 18, carbs: 44, fat: 20, fiber: 6, sodium: 580, ingredients: ['Plant Patty', 'Avocado', 'Lettuce', 'Tomato'] },
+  { id: 'onion-rings', name: 'Onion Rings', restaurant: 'Burger Hub', restaurantId: 'burger-hub', category: 'burger', price: 4.49, rating: 4.4, prepTime: 9, veg: true, image: 'https://images.pexels.com/photos/263049/pexels-photo-263049.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crispy battered onion rings with dip.', calories: 410, protein: 6, carbs: 50, fat: 20, fiber: 3, sodium: 520, ingredients: ['Onions', 'Batter', 'Spices'] },
+
+  { id: 'chili-momo', name: 'Chili Momo', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', category: 'momo', price: 9.99, rating: 4.8, prepTime: 17, veg: false, image: 'https://images.pexels.com/photos/6546029/pexels-photo-6546029.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Fried momos tossed in a spicy Indo-Chinese chili sauce.', calories: 380, protein: 16, carbs: 38, fat: 16, fiber: 2, sodium: 680, ingredients: ['Chicken Momos', 'Chili Sauce', 'Bell Peppers', 'Onion'] },
+  { id: 'momo-soup', name: 'Momo Soup', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', category: 'momo', price: 7.49, rating: 4.6, prepTime: 14, veg: true, image: 'https://images.pexels.com/photos/6249015/pexels-photo-6249015.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Steamed momos in a flavorful clear broth.', calories: 260, protein: 10, carbs: 34, fat: 8, fiber: 2, sodium: 520, ingredients: ['Momos', 'Vegetable Broth', 'Coriander'] },
+
+  { id: 'mutton-biryani', name: 'Mutton Biryani', restaurant: 'Spice Garden', restaurantId: 'spice-garden', category: 'biryani', price: 14.99, rating: 4.8, prepTime: 30, veg: false, image: 'https://images.pexels.com/photos/8250738/pexels-photo-8250738.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Slow-cooked mutton biryani with saffron rice and whole spices.', calories: 680, protein: 34, carbs: 70, fat: 28, fiber: 4, sodium: 980, ingredients: ['Mutton', 'Basmati Rice', 'Saffron', 'Whole Spices'] },
+  { id: 'paneer-tikka', name: 'Paneer Tikka', restaurant: 'Spice Garden', restaurantId: 'spice-garden', category: 'biryani', price: 9.49, rating: 4.6, prepTime: 18, veg: true, image: 'https://images.pexels.com/photos/7394819/pexels-photo-7394819.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Char-grilled paneer marinated in yogurt and spices.', calories: 320, protein: 16, carbs: 12, fat: 22, fiber: 2, sodium: 560, ingredients: ['Paneer', 'Yogurt', 'Spices', 'Bell Peppers'] },
+
+  { id: 'tempura-roll', name: 'Shrimp Tempura Roll', restaurant: 'Tokyo Sushi', restaurantId: 'tokyo-sushi', category: 'sushi', price: 13.99, rating: 4.7, prepTime: 14, veg: false, image: 'https://images.pexels.com/photos/11064614/pexels-photo-11064614.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Crispy tempura shrimp, avocado, and spicy mayo. 8 pieces.', calories: 320, protein: 12, carbs: 44, fat: 11, fiber: 2, sodium: 680, ingredients: ['Tempura Shrimp', 'Avocado', 'Rice', 'Nori', 'Spicy Mayo'] },
+  { id: 'tuna-roll', name: 'Tuna Maki', restaurant: 'Tokyo Sushi', restaurantId: 'tokyo-sushi', category: 'sushi', price: 9.99, rating: 4.5, prepTime: 10, veg: false, image: 'https://images.pexels.com/photos/1028429/pexels-photo-1028429.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Fresh tuna rolled in rice and nori. 6 pieces.', calories: 190, protein: 10, carbs: 26, fat: 4, fiber: 1, sodium: 300, ingredients: ['Tuna', 'Rice', 'Nori'] },
+
+  { id: 'greek-salad', name: 'Greek Salad', restaurant: 'Green Bowl', restaurantId: 'green-bowl', category: 'healthy', price: 9.49, rating: 4.5, prepTime: 10, veg: true, image: 'https://images.pexels.com/photos/13788174/pexels-photo-13788174.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Tomatoes, cucumber, olives, and feta with olive oil dressing.', calories: 240, protein: 7, carbs: 16, fat: 16, fiber: 4, sodium: 540, ingredients: ['Tomatoes', 'Cucumber', 'Olives', 'Feta', 'Olive Oil'] },
+  { id: 'buddha-bowl', name: 'Buddha Bowl', restaurant: 'Green Bowl', restaurantId: 'green-bowl', category: 'healthy', price: 11.49, rating: 4.7, prepTime: 14, veg: true, image: 'https://images.pexels.com/photos/7788313/pexels-photo-7788313.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Brown rice, roasted sweet potato, kale, avocado, and tahini.', calories: 480, protein: 14, carbs: 62, fat: 20, fiber: 11, sodium: 360, ingredients: ['Brown Rice', 'Sweet Potato', 'Kale', 'Avocado', 'Tahini'] },
+
+  { id: 'tiramisu', name: 'Tiramisu', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'desserts', price: 6.99, rating: 4.8, prepTime: 8, veg: true, image: 'https://images.pexels.com/photos/6880219/pexels-photo-6880219.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Coffee-soaked ladyfingers layered with mascarpone cream.', calories: 430, protein: 7, carbs: 44, fat: 26, fiber: 1, sodium: 280, ingredients: ['Ladyfingers', 'Mascarpone', 'Coffee', 'Cocoa'] },
+  { id: 'brownie', name: 'Fudge Brownie', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'desserts', price: 5.49, rating: 4.6, prepTime: 7, veg: true, image: 'https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Dense chocolate brownie with walnuts and a fudgy center.', calories: 380, protein: 5, carbs: 48, fat: 20, fiber: 2, sodium: 260, ingredients: ['Chocolate', 'Walnuts', 'Flour', 'Sugar'] },
+  { id: 'ice-cream', name: 'Vanilla Ice Cream', restaurant: 'Urban Café', restaurantId: 'urban-cafe', category: 'desserts', price: 4.49, rating: 4.4, prepTime: 3, veg: true, image: 'https://images.pexels.com/photos/2130115/pexels-photo-2130115.jpeg?auto=compress&cs=tinysrgb&w=600', desc: 'Creamy vanilla bean ice cream with chocolate drizzle.', calories: 280, protein: 4, carbs: 30, fat: 16, fiber: 0, sodium: 90, ingredients: ['Vanilla', 'Cream', 'Sugar'] },
+
+  // Pizza Corner
+  { id: "pepperoni-feast", name: "Pepperoni Feast Pizza", restaurant: "Pizza Corner", restaurantId: "pizza-corner", category: "pizza", price: 11.99, rating: 4.4, prepTime: 18, veg: false, chefChoice: true, image: "https://images.pexels.com/photos/6068713/pexels-photo-6068713.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Double pepperoni with extra cheese on a thin crispy crust.", calories: 310, protein: 14, carbs: 35, fat: 13, fiber: 2, sodium: 690, ingredients: ["Pepperoni", "Mozzarella", "Tomato Sauce"] },
+  { id: "meat-lovers-pizza", name: "Meat Lovers Pizza", restaurant: "Pizza Corner", restaurantId: "pizza-corner", category: "pizza", price: 13.99, rating: 4.5, prepTime: 20, veg: false, image: "https://images.pexels.com/photos/3915857/pexels-photo-3915857.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Pepperoni, sausage, bacon, and ham piled on a cheesy crust.", calories: 380, protein: 18, carbs: 36, fat: 18, fiber: 2, sodium: 820, ingredients: ["Pepperoni", "Sausage", "Bacon", "Ham", "Mozzarella"] },
+  { id: "veggie-supreme-pizza", name: "Veggie Supreme Pizza", restaurant: "Pizza Corner", restaurantId: "pizza-corner", category: "pizza", price: 10.99, rating: 4.3, prepTime: 18, veg: true, image: "https://images.pexels.com/photos/7315016/pexels-photo-7315016.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Loaded with peppers, onions, olives, mushrooms, and extra cheese.", calories: 250, protein: 10, carbs: 32, fat: 9, fiber: 3, sodium: 540, ingredients: ["Bell Peppers", "Onions", "Olives", "Mushrooms", "Mozzarella"] },
+
+  // Himalayan Grill
+  { id: "chilli-chicken-momo", name: "Chilli Chicken Momo", restaurant: "Himalayan Grill", restaurantId: "himalayan-grill", category: "momo", price: 9.49, rating: 4.6, prepTime: 16, veg: false, chefChoice: true, image: "https://images.pexels.com/photos/6546025/pexels-photo-6546025.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Fried momos tossed in a fiery Indo-Chinese chilli sauce with peppers.", calories: 360, protein: 16, carbs: 36, fat: 15, fiber: 2, sodium: 640, ingredients: ["Chicken Momos", "Chilli Sauce", "Bell Peppers", "Onion"] },
+  { id: "steamed-veg-momo-grill", name: "Steamed Veg Momo", restaurant: "Himalayan Grill", restaurantId: "himalayan-grill", category: "momo", price: 7.49, rating: 4.5, prepTime: 14, veg: true, image: "https://images.pexels.com/photos/13252530/pexels-photo-13252530.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Steamed vegetable momos served with tangy sesame chutney.", calories: 230, protein: 7, carbs: 36, fat: 6, fiber: 3, sodium: 400, ingredients: ["Cabbage", "Carrot", "Ginger", "Sesame Chutney"] },
+  { id: "jhol-momo", name: "Jhol Momo", restaurant: "Himalayan Grill", restaurantId: "himalayan-grill", category: "momo", price: 8.99, rating: 4.7, prepTime: 15, veg: true, image: "https://images.pexels.com/photos/12431640/pexels-photo-12431640.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Steamed momos immersed in a spicy, tangy tomato-jhol broth.", calories: 280, protein: 9, carbs: 38, fat: 8, fiber: 3, sodium: 520, ingredients: ["Momos", "Tomato Jhol", "Sesame", "Coriander"] },
+];
+
+export const OFFERS = [
+  { id: 'offer-1', title: '20% Off Your First Order', desc: 'New customers get 20% off on orders above $20.', badge: '20% OFF', code: 'WELCOME10', image: IMAGES.promo1 },
+  { id: 'offer-2', title: 'Free Delivery Today', desc: 'Enjoy free delivery on all orders, no minimum.', badge: 'FREE DEL', code: 'FREEDELIVERY', image: IMAGES.promo2 },
+  { id: 'offer-3', title: 'Buy 1 Get 1 Free', desc: 'On selected pizzas and momos this week.', badge: 'BOGO', code: null, image: IMAGES.promo3 },
+  { id: 'offer-4', title: 'Weekend Special Combo', desc: 'Family combo meals starting at $24.99.', badge: 'WEEKEND', code: null, image: IMAGES.promo4 },
+  { id: 'offer-5', title: 'Student Discount 15%', desc: 'Show your student ID and save 15% every day.', badge: 'STUDENT', code: 'STUDENT15', image: IMAGES.promo5 },
+];
+
+export const COUPONS = [
+  { code: 'WELCOME10', desc: '10% off on orders above $20', type: 'percent', value: 10, minOrder: 20, expiry: '2026-12-31' },
+  { code: 'SAVE20', desc: '20% off on orders above $40', type: 'percent', value: 20, minOrder: 40, expiry: '2026-12-31' },
+  { code: 'FREEDELIVERY', desc: 'Free delivery on any order', type: 'delivery', value: 0, minOrder: 0, expiry: '2026-12-31' },
+  { code: 'STUDENT15', desc: '15% off for students, min $15', type: 'percent', value: 15, minOrder: 15, expiry: '2026-12-31' },
+];
+
+export const TESTIMONIALS = [
+  { name: 'Sarah Mitchell', role: 'Food Blogger', rating: 5, text: 'FoodFiesta has completely changed how I order food. The variety of restaurants and the delivery speed is unmatched. The interface is so easy to use!', avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=120' },
+  { name: 'James Anderson', role: 'Software Engineer', rating: 5, text: 'I order lunch almost every day now. The deals and coupons save me a lot, and the food always arrives hot and fresh. Highly recommended.', avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120' },
+  { name: 'Priya Sharma', role: 'Marketing Manager', rating: 4.5, text: 'Great selection of restaurants and the order tracking is super accurate. Love the community reviews — they help me pick the best spots.', avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=120' },
+];
+
+export const SEED_REVIEWS = [
+  { id: 'r1', name: 'Sarah Mitchell', avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Bella Italia', restaurantId: 'bella-italia', food: 'Margherita Pizza', foodId: 'margherita-pizza', cuisine: 'pizza', rating: 5, date: '2026-06-28', text: 'Best Margherita in the city! The crust was perfectly charred and the mozzarella was so fresh. Will order again.', likes: 42, helpful: 28, verified: true },
+  { id: 'r2', name: 'James Anderson', avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Himalayan Momo House', restaurantId: 'himalayan-momo-house', food: 'Chicken Momo', foodId: 'chicken-momo', cuisine: 'momo', rating: 5, date: '2026-06-25', text: 'These momos are incredible. The chutney has the perfect kick. Delivery was fast and everything arrived hot.', likes: 67, helpful: 51, verified: true },
+  { id: 'r3', name: 'Priya Sharma', avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Spice Garden', restaurantId: 'spice-garden', food: 'Chicken Biryani', foodId: 'chicken-biryani', cuisine: 'biryani', rating: 4.5, date: '2026-06-22', text: 'Authentic flavors and generous portions. The biryani was fragrant and the chicken was tender. A bit pricey but worth it.', likes: 35, helpful: 22, verified: true },
+  { id: 'r4', name: 'Michael Chen', avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Tokyo Sushi', restaurantId: 'tokyo-sushi', food: 'California Roll', foodId: 'california-roll', cuisine: 'sushi', rating: 4.5, date: '2026-06-20', text: 'Fresh and well-made sushi. The salmon nigiri melted in my mouth. Packaging could be better but the food is top-notch.', likes: 29, helpful: 18, verified: true },
+  { id: 'r5', name: 'Emily Rodriguez', avatar: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Green Bowl', restaurantId: 'green-bowl', food: 'Quinoa Power Bowl', foodId: 'quinoa-bowl', cuisine: 'healthy', rating: 5, date: '2026-06-18', text: 'My go-to healthy lunch. The tahini dressing ties everything together perfectly. Love that they use organic ingredients.', likes: 51, helpful: 40, verified: true },
+  { id: 'r6', name: 'David Kim', avatar: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Burger Hub', restaurantId: 'burger-hub', food: 'Double Cheese Burger', foodId: 'double-cheese-burger', cuisine: 'burger', rating: 4, date: '2026-06-15', text: 'Solid burger. Juicy patties and great sauce. Fries were a little cold by the time they arrived but still tasty.', likes: 23, helpful: 14, verified: true },
+  { id: 'r7', name: 'Anita Gurung', avatar: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'Urban Café', restaurantId: 'urban-cafe', food: 'Chocolate Cake', foodId: 'chocolate-cake', cuisine: 'desserts', rating: 5, date: '2026-06-12', text: 'That molten center is to die for! Paired perfectly with their iced latte. My favorite dessert spot now.', likes: 44, helpful: 31, verified: true },
+  { id: 'r8', name: 'Robert Lee', avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=120', restaurant: 'BBQ Nation', restaurantId: 'bbq-nation', food: 'BBQ Mixed Platter', foodId: 'bbq-platter', cuisine: 'burger', rating: 4.5, date: '2026-06-10', text: 'The brisket was tender and smoky. Ribs fell off the bone. Generous portion for the price. Will be back for sure.', likes: 38, helpful: 25, verified: true },
+];
+
+export const FEATURES = [
+  { icon: 'truck', title: 'Fast Delivery', desc: 'Hot food at your door in 30 minutes or less, guaranteed.' },
+  { icon: 'shield', title: 'Trusted Restaurants', desc: 'Every partner is vetted for quality, hygiene, and consistency.' },
+  { icon: 'lock', title: 'Secure Ordering', desc: 'Your payments and personal data are always protected.' },
+  { icon: 'leaf', title: 'Fresh Food Every Day', desc: 'Ingredients sourced daily. No shortcuts, no compromises.' },
+];
+
+export function getRestaurant(id) {
+  return RESTAURANTS.find(r => r.id === id);
+}
+
+export function getFood(id) {
+  return FOODS.find(f => f.id === id);
+}
+
+export function getFoodsByRestaurant(restaurantId) {
+  return FOODS.filter(f => f.restaurantId === restaurantId);
+}
+
+export function getFoodsByCategory(category) {
+  return FOODS.filter(f => f.category === category);
+}
+
+export function priceLevelLabel(level) {
+  return '$'.repeat(level);
+}

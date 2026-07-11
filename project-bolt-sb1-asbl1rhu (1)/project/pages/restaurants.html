@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse FoodFiesta restaurants — filter by cuisine, rating, delivery time, and price to find your next meal." />
+    <title>Restaurants — FoodFiesta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/utilities.css" />
+  </head>
+  <body class="page" data-page="Restaurants">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="navbar-host"></div>
+
+    <main class="page-main" id="main">
+      <section class="section-sm" style="padding-bottom:0">
+        <div class="container">
+          <nav id="crumbs"></nav>
+          <div class="section-header reveal" style="margin-bottom:var(--sp-5)">
+            <div>
+              <h1 style="font-size:var(--fs-h1);font-weight:700">Restaurants</h1>
+              <p class="section-header__subtitle">Browse restaurants offering delicious meals from a variety of cuisines.</p>
+            </div>
+          </div>
+          <div class="search-input search-input--lg reveal" style="max-width:640px;margin-bottom:var(--sp-5)">
+            <span class="search-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </span>
+            <input class="input input--lg" type="search" id="restaurantSearch" placeholder="Search restaurants..." aria-label="Search restaurants" />
+            <button class="btn btn-icon btn-icon-sm search-clear" id="searchClear" aria-label="Clear search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:var(--sp-5)">
+        <div class="container">
+          <div class="flex items-center justify-between gap-4 mb-5" style="flex-wrap:wrap">
+            <div class="flex items-center gap-3">
+              <button class="btn btn-outline btn-sm filter-toggle-mobile" id="filterToggle" aria-expanded="false">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                Filters
+              </button>
+              <span class="fs-small text-muted" id="resultCount"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="sortSelect" class="fs-small text-muted">Sort by</label>
+              <select class="select" id="sortSelect" style="width:auto;min-height:40px;padding-block:var(--sp-2)">
+                <option value="recommended">Recommended</option>
+                <option value="rating">Highest Rated</option>
+                <option value="delivery">Fastest Delivery</option>
+                <option value="fee">Lowest Delivery Fee</option>
+                <option value="az">Alphabetical (A–Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="layout-sidebar">
+            <aside class="filter-panel" id="filterPanel" aria-label="Filters"></aside>
+            <div>
+              <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-3" id="restaurantGrid" style="gap:24px"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-host"></div>
+
+    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/pages/restaurants.js"></script>
+  </body>
+</html>

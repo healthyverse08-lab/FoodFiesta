@@ -1,0 +1,102 @@
+/* ============================================================
+   FoodFiesta — Layout
+   Container, grid helpers, section spacing, sticky regions.
+   ============================================================ */
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--container-pad);
+  }
+}
+
+.container-sm { max-width: 768px; }
+.container-lg { max-width: 1440px; }
+.container-narrow { max-width: 560px; }
+.container-wide { max-width: 1536px; }
+
+/* ---- Section spacing ---- */
+.section {
+  padding-block: var(--sp-8);
+}
+.section-sm { padding-block: var(--sp-6); }
+.section-lg { padding-block: var(--sp-10); }
+.section-xl { padding-block: var(--sp-11); }
+
+@media (max-width: 767px) {
+  .section { padding-block: var(--sp-7); }
+  .section-sm { padding-block: var(--sp-5); }
+  .section-lg { padding-block: var(--sp-8); }
+  .section-xl { padding-block: var(--sp-9); }
+}
+
+/* ---- Generic grid ---- */
+.grid {
+  display: grid;
+  gap: var(--sp-5);
+}
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (min-width: 768px) {
+  .grid-md-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-md-cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid-lg-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-lg-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-lg-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-lg-cols-5 { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ---- Sidebar layout (used by listings) ---- */
+.layout-sidebar {
+  display: grid;
+  gap: var(--sp-6);
+}
+@media (min-width: 1024px) {
+  .layout-sidebar {
+    grid-template-columns: 280px 1fr;
+    gap: var(--sp-7);
+    align-items: start;
+  }
+}
+
+/* ---- Two-column split ---- */
+.split-2 {
+  display: grid;
+  gap: var(--sp-6);
+}
+@media (min-width: 1024px) {
+  .split-2 {
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--sp-7);
+    align-items: start;
+  }
+}
+
+/* ---- Sticky ---- */
+.sticky-top {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--sp-5));
+  z-index: var(--z-sticky);
+}
+
+/* ---- Page wrapper for fixed navbar ---- */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page-main {
+  flex: 1 0 auto;
+}
