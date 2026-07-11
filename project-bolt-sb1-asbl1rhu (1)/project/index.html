@@ -22,7 +22,9 @@
     <header class="navbar" id="navbar">
       <div class="navbar__inner">
         <a class="logo" href="index.html" aria-label="FoodFiesta home">
-          <span class="logo__mark" id="navLogo"></span>
+          <span class="logo__mark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-1.5 3.5L20 11l1.5-1.5L16 2z"/><path d="M14.5 5.5 19 10l-7 7-2-2 7-7z"/><path d="m8 13-2 2"/><path d="m4 17 3 3"/></svg>
+          </span>
           <span class="logo__text">Food<span>Fiesta</span><span class="logo__tag">Eat. Enjoy. Repeat.</span></span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
@@ -32,9 +34,16 @@
           <a class="nav-link" href="pages/community.html">Reviews</a>
         </nav>
         <div class="navbar__actions">
-          <button class="btn-icon" aria-label="Search" id="navSearchBtn"></button>
-          <a class="btn-icon navbar__cart" href="pages/cart.html" aria-label="Cart" id="cartLink"></a>
-          <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer" id="navHamburger"></button>
+          <button class="btn-icon" aria-label="Search" id="navSearchBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+          <a class="btn-icon navbar__cart" href="pages/cart.html" aria-label="Cart" id="cartLink">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span class="cart-badge" style="display:none">0</span>
+          </a>
+          <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer" id="navHamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
         </div>
       </div>
     </header>
@@ -44,24 +53,47 @@
     <aside class="drawer" id="navDrawer" aria-label="Mobile navigation">
       <div class="drawer__header">
         <a class="logo" href="index.html">
-          <span class="logo__mark" id="drawerLogo"></span>
+          <span class="logo__mark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-1.5 3.5L20 11l1.5-1.5L16 2z"/><path d="M14.5 5.5 19 10l-7 7-2-2 7-7z"/><path d="m8 13-2 2"/><path d="m4 17 3 3"/></svg>
+          </span>
           <span class="logo__text">Food<span>Fiesta</span></span>
         </a>
-        <button class="modal__close drawer__close" aria-label="Close menu" id="drawerCloseBtn"></button>
+        <button class="modal__close drawer__close" aria-label="Close menu" id="drawerCloseBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
       </div>
       <nav class="drawer__nav" aria-label="Mobile">
-        <a class="drawer__link is-active" href="index.html" aria-current="page"><span class="icon" id="drawerHomeIcon"></span><span>Home</span></a>
-        <a class="drawer__link" href="pages/restaurants.html"><span class="icon" id="drawerRestIcon"></span><span>Restaurants</span></a>
-        <a class="drawer__link" href="pages/offers.html"><span class="icon" id="drawerOffersIcon"></span><span>Offers</span></a>
-        <a class="drawer__link" href="pages/community.html"><span class="icon" id="drawerReviewsIcon"></span><span>Reviews</span></a>
+        <a class="drawer__link is-active" href="index.html" aria-current="page">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+          <span>Home</span>
+        </a>
+        <a class="drawer__link" href="pages/restaurants.html">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg></span>
+          <span>Restaurants</span>
+        </a>
+        <a class="drawer__link" href="pages/offers.html">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H2.5a.5.5 0 0 0-.5.5v8.672a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></span>
+          <span>Offers</span>
+        </a>
+        <a class="drawer__link" href="pages/community.html">
+          <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+          <span>Reviews</span>
+        </a>
       </nav>
       <div class="drawer__footer">
-        <a class="btn btn-outline btn-block" href="pages/cart.html" id="drawerCartBtn">View Cart</a>
-        <a class="btn btn-primary btn-block" href="pages/restaurants.html" id="drawerBrowseBtn">Browse Restaurants</a>
+        <a class="btn btn-outline btn-block" href="pages/cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          View Cart
+        </a>
+        <a class="btn btn-primary btn-block" href="pages/restaurants.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>
+          Browse Restaurants
+        </a>
       </div>
     </aside>
 
     <main class="page-main" id="main">
+
       <!-- ===== Hero ===== -->
       <section class="section hero-section">
         <div class="container">
@@ -72,14 +104,16 @@
               <p class="text-muted" style="font-size:var(--fs-body-lg);margin-top:16px;max-width:520px">Browse restaurants, discover new dishes, find exclusive deals, and order food in just a few taps. Your next great meal is closer than you think.</p>
               <form class="hero-search" id="heroSearchForm" style="margin-top:28px">
                 <div class="search-input search-input--lg">
-                  <span class="search-icon" id="heroSearchIcon"></span>
+                  <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  </span>
                   <input class="input" type="search" name="search" placeholder="Search restaurants, cuisines or dishes..." aria-label="Search restaurants, cuisines or dishes" />
                   <button class="btn btn-primary" type="submit">Search</button>
                 </div>
               </form>
               <div class="flex gap-3" style="flex-wrap:wrap;margin-top:24px">
-                <a class="btn btn-primary btn-lg" href="pages/restaurants.html" id="heroBrowseBtn">Browse Restaurants</a>
-                <a class="btn btn-outline btn-lg" href="pages/offers.html" id="heroOffersBtn">Explore Offers</a>
+                <a class="btn btn-primary btn-lg" href="pages/restaurants.html">Browse Restaurants</a>
+                <a class="btn btn-outline btn-lg" href="pages/offers.html">Explore Offers</a>
               </div>
               <div class="hero-stats" style="margin-top:40px">
                 <div class="hero-stat"><div class="hero-stat__num">200+</div><div class="hero-stat__label">Restaurants</div></div>
@@ -92,11 +126,15 @@
             <div class="hero-visual reveal">
               <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Freshly prepared food spread" loading="eager" class="hero-visual__main" />
               <div class="hero-visual__card hero-visual__card--1">
-                <div class="hero-visual__icon" id="heroCard1Icon"></div>
+                <div class="hero-visual__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 8h4l3 3v5a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                </div>
                 <div><div class="fw-semibold fs-small">Free delivery</div><div class="fs-caption text-tertiary">On your first order</div></div>
               </div>
               <div class="hero-visual__card hero-visual__card--2">
-                <div class="hero-visual__icon" style="background:var(--color-success-50);color:var(--color-success-600)" id="heroCard2Icon"></div>
+                <div class="hero-visual__icon" style="background:var(--color-success-50);color:var(--color-success-600)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
                 <div><div class="fw-semibold fs-small">Order placed</div><div class="fs-caption text-tertiary">Arriving in 25 min</div></div>
               </div>
             </div>
@@ -104,7 +142,7 @@
         </div>
       </section>
 
-      <!-- ===== Categories ===== -->
+      <!-- ===== Popular Categories ===== -->
       <section class="section">
         <div class="container">
           <div class="section-header reveal">
@@ -113,7 +151,48 @@
               <p class="section-header__subtitle">Pick a craving and start exploring the best spots in town.</p>
             </div>
           </div>
-          <div class="scroll-row" id="categoriesRow"></div>
+          <div class="scroll-row">
+            <button class="cat-card" data-category="pizza" onclick="window.goCategory('pizza')" aria-label="Browse Pizza">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pizza" loading="lazy" /></div>
+              <span class="cat-card__name">Pizza</span>
+              <span class="cat-card__count">11 items</span>
+            </button>
+            <button class="cat-card" data-category="burger" onclick="window.goCategory('burger')" aria-label="Browse Burger">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Burger" loading="lazy" /></div>
+              <span class="cat-card__name">Burger</span>
+              <span class="cat-card__count">8 items</span>
+            </button>
+            <button class="cat-card" data-category="momo" onclick="window.goCategory('momo')" aria-label="Browse Momo">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Momo" loading="lazy" /></div>
+              <span class="cat-card__name">Momo</span>
+              <span class="cat-card__count">8 items</span>
+            </button>
+            <button class="cat-card" data-category="biryani" onclick="window.goCategory('biryani')" aria-label="Browse Biryani">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Biryani" loading="lazy" /></div>
+              <span class="cat-card__name">Biryani</span>
+              <span class="cat-card__count">4 items</span>
+            </button>
+            <button class="cat-card" data-category="sushi" onclick="window.goCategory('sushi')" aria-label="Browse Sushi">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sushi" loading="lazy" /></div>
+              <span class="cat-card__name">Sushi</span>
+              <span class="cat-card__count">4 items</span>
+            </button>
+            <button class="cat-card" data-category="healthy" onclick="window.goCategory('healthy')" aria-label="Browse Healthy">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Healthy" loading="lazy" /></div>
+              <span class="cat-card__name">Healthy</span>
+              <span class="cat-card__count">5 items</span>
+            </button>
+            <button class="cat-card" data-category="desserts" onclick="window.goCategory('desserts')" aria-label="Browse Desserts">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Desserts" loading="lazy" /></div>
+              <span class="cat-card__name">Desserts</span>
+              <span class="cat-card__count">5 items</span>
+            </button>
+            <button class="cat-card" data-category="drinks" onclick="window.goCategory('drinks')" aria-label="Browse Drinks">
+              <div class="cat-card__icon"><img src="https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Drinks" loading="lazy" /></div>
+              <span class="cat-card__name">Drinks</span>
+              <span class="cat-card__count">3 items</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -126,10 +205,214 @@
               <p class="section-header__subtitle">Hand-picked favorites loved by our community.</p>
             </div>
             <div class="section-header__action">
-              <a class="btn btn-text" href="pages/restaurants.html">View All <span class="icon" id="featArrow"></span></a>
+              <a class="btn btn-text" href="pages/restaurants.html">View All
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
-          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="featuredRestaurants" style="gap:24px"></div>
+          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" style="gap:24px">
+
+            <!-- Restaurant 1: Bella Italia -->
+            <article class="restaurant-card clickable reveal" data-restaurant="bella-italia" tabindex="0" onclick="window.goRestaurant('bella-italia')" role="link" aria-label="Bella Italia">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">20% OFF</span>
+                <button class="fav-btn" data-fav-restaurant="bella-italia" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('bella-italia', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1527353/pexels-photo-1527353.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bella Italia cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Bella Italia logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Bella Italia</h3>
+                <p class="restaurant-card__cuisine">Italian · Pizza</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.7</span>
+                  <span class="dot"></span><span>25 min</span>
+                  <span class="dot"></span><span>$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$2.99 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 2: Burger Hub -->
+            <article class="restaurant-card clickable reveal" data-restaurant="burger-hub" tabindex="0" onclick="window.goRestaurant('burger-hub')" role="link" aria-label="Burger Hub">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">Free Delivery</span>
+                <button class="fav-btn" data-fav-restaurant="burger-hub" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('burger-hub', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burger Hub cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Burger Hub logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Burger Hub</h3>
+                <p class="restaurant-card__cuisine">American · Burger</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.5</span>
+                  <span class="dot"></span><span>18 min</span>
+                  <span class="dot"></span><span>$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$1.99 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 3: Himalayan Momo House -->
+            <article class="restaurant-card clickable reveal" data-restaurant="himalayan-momo-house" tabindex="0" onclick="window.goRestaurant('himalayan-momo-house')" role="link" aria-label="Himalayan Momo House">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">Buy 1 Get 1</span>
+                <button class="fav-btn" data-fav-restaurant="himalayan-momo-house" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('himalayan-momo-house', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/5409010/pexels-photo-5409010.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Himalayan Momo House cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Himalayan Momo House logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Himalayan Momo House</h3>
+                <p class="restaurant-card__cuisine">Nepali · Momo</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.8</span>
+                  <span class="dot"></span><span>22 min</span>
+                  <span class="dot"></span><span>$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$1.49 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 4: Tokyo Sushi -->
+            <article class="restaurant-card clickable reveal" data-restaurant="tokyo-sushi" tabindex="0" onclick="window.goRestaurant('tokyo-sushi')" role="link" aria-label="Tokyo Sushi">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">15% OFF</span>
+                <button class="fav-btn" data-fav-restaurant="tokyo-sushi" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('tokyo-sushi', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tokyo Sushi cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Tokyo Sushi logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Tokyo Sushi</h3>
+                <p class="restaurant-card__cuisine">Japanese · Sushi</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.6</span>
+                  <span class="dot"></span><span>30 min</span>
+                  <span class="dot"></span><span>$$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$3.49 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 5: Spice Garden -->
+            <article class="restaurant-card clickable reveal" data-restaurant="spice-garden" tabindex="0" onclick="window.goRestaurant('spice-garden')" role="link" aria-label="Spice Garden">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">Student Discount</span>
+                <button class="fav-btn" data-fav-restaurant="spice-garden" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('spice-garden', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Spice Garden cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Spice Garden logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Spice Garden</h3>
+                <p class="restaurant-card__cuisine">Indian · Biryani</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.4</span>
+                  <span class="dot"></span><span>35 min</span>
+                  <span class="dot"></span><span>$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$2.49 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 6: Green Bowl -->
+            <article class="restaurant-card clickable reveal" data-restaurant="green-bowl" tabindex="0" onclick="window.goRestaurant('green-bowl')" role="link" aria-label="Green Bowl">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">Free Delivery</span>
+                <button class="fav-btn" data-fav-restaurant="green-bowl" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('green-bowl', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1392252/pexels-photo-1392252.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Green Bowl cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Green Bowl logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Green Bowl</h3>
+                <p class="restaurant-card__cuisine">Healthy · Salads</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.5</span>
+                  <span class="dot"></span><span>20 min</span>
+                  <span class="dot"></span><span>$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$2.99 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 7: Urban Cafe -->
+            <article class="restaurant-card clickable reveal" data-restaurant="urban-cafe" tabindex="0" onclick="window.goRestaurant('urban-cafe')" role="link" aria-label="Urban Cafe">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">Weekend Special</span>
+                <button class="fav-btn" data-fav-restaurant="urban-cafe" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('urban-cafe', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Urban Cafe cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Urban Cafe logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">Urban Café</h3>
+                <p class="restaurant-card__cuisine">Café · Desserts</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.6</span>
+                  <span class="dot"></span><span>15 min</span>
+                  <span class="dot"></span><span>$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$1.99 delivery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Restaurant 8: BBQ Nation -->
+            <article class="restaurant-card clickable reveal" data-restaurant="bbq-nation" tabindex="0" onclick="window.goRestaurant('bbq-nation')" role="link" aria-label="BBQ Nation">
+              <div class="restaurant-card__cover">
+                <span class="offer-badge">25% OFF</span>
+                <button class="fav-btn" data-fav-restaurant="bbq-nation" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavRestaurant('bbq-nation', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg?auto=compress&cs=tinysrgb&w=800" alt="BBQ Nation cover" loading="lazy" />
+                <div class="restaurant-card__logo"><img src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=120" alt="BBQ Nation logo" loading="lazy" /></div>
+              </div>
+              <div class="restaurant-card__body">
+                <h3 class="restaurant-card__name">BBQ Nation</h3>
+                <p class="restaurant-card__cuisine">American · BBQ</p>
+                <div class="restaurant-card__meta">
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.5</span>
+                  <span class="dot"></span><span>40 min</span>
+                  <span class="dot"></span><span>$$</span>
+                </div>
+                <div class="restaurant-card__footer">
+                  <span class="status-badge status-open">Open</span>
+                  <span>$3.99 delivery</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
@@ -142,14 +425,218 @@
               <p class="section-header__subtitle">What everyone is ordering right now.</p>
             </div>
             <div class="section-header__action">
-              <a class="btn btn-text" href="pages/restaurants.html">View All <span class="icon" id="dishArrow"></span></a>
+              <a class="btn btn-text" href="pages/restaurants.html">View All
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
-          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="popularDishes" style="gap:24px"></div>
+          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" style="gap:24px">
+
+            <!-- Food 1: Margherita Pizza -->
+            <article class="food-card clickable reveal" data-food="margherita-pizza" tabindex="0" onclick="window.goFood('margherita-pizza')" role="link" aria-label="Margherita Pizza from Bella Italia">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="margherita-pizza" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('margherita-pizza', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Margherita Pizza" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-veg"><span class="dot"></span>Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.8</span>
+                </div>
+                <h3 class="food-card__name">Margherita Pizza</h3>
+                <p class="food-card__restaurant">Bella Italia</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$12.99</span>
+                  <button class="food-card__add" aria-label="Add Margherita Pizza to cart" onclick="event.stopPropagation(); window.quickAddCart('margherita-pizza', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 2: Chicken Burger -->
+            <article class="food-card clickable reveal" data-food="chicken-burger" tabindex="0" onclick="window.goFood('chicken-burger')" role="link" aria-label="Chicken Burger from Burger Hub">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="chicken-burger" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('chicken-burger', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chicken Burger" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-nonveg"><span class="dot"></span>Non-Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.6</span>
+                </div>
+                <h3 class="food-card__name">Chicken Burger</h3>
+                <p class="food-card__restaurant">Burger Hub</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$9.99</span>
+                  <button class="food-card__add" aria-label="Add Chicken Burger to cart" onclick="event.stopPropagation(); window.quickAddCart('chicken-burger', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 3: Veg Momo -->
+            <article class="food-card clickable reveal" data-food="veg-momo" tabindex="0" onclick="window.goFood('veg-momo')" role="link" aria-label="Veg Momo from Himalayan Momo House">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="veg-momo" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('veg-momo', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/12119029/pexels-photo-12119029.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Veg Momo" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-veg"><span class="dot"></span>Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.8</span>
+                </div>
+                <h3 class="food-card__name">Veg Momo</h3>
+                <p class="food-card__restaurant">Himalayan Momo House</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$7.99</span>
+                  <button class="food-card__add" aria-label="Add Veg Momo to cart" onclick="event.stopPropagation(); window.quickAddCart('veg-momo', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 4: Chicken Biryani -->
+            <article class="food-card clickable reveal" data-food="chicken-biryani" tabindex="0" onclick="window.goFood('chicken-biryani')" role="link" aria-label="Chicken Biryani from Spice Garden">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="chicken-biryani" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('chicken-biryani', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chicken Biryani" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-nonveg"><span class="dot"></span>Non-Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.7</span>
+                </div>
+                <h3 class="food-card__name">Chicken Biryani</h3>
+                <p class="food-card__restaurant">Spice Garden</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$11.99</span>
+                  <button class="food-card__add" aria-label="Add Chicken Biryani to cart" onclick="event.stopPropagation(); window.quickAddCart('chicken-biryani', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 5: California Roll -->
+            <article class="food-card clickable reveal" data-food="california-roll" tabindex="0" onclick="window.goFood('california-roll')" role="link" aria-label="California Roll from Tokyo Sushi">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="california-roll" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('california-roll', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=600" alt="California Roll" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-nonveg"><span class="dot"></span>Non-Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.6</span>
+                </div>
+                <h3 class="food-card__name">California Roll</h3>
+                <p class="food-card__restaurant">Tokyo Sushi</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$10.99</span>
+                  <button class="food-card__add" aria-label="Add California Roll to cart" onclick="event.stopPropagation(); window.quickAddCart('california-roll', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 6: Caesar Salad -->
+            <article class="food-card clickable reveal" data-food="caesar-salad" tabindex="0" onclick="window.goFood('caesar-salad')" role="link" aria-label="Caesar Salad from Green Bowl">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="caesar-salad" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('caesar-salad', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Caesar Salad" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-veg"><span class="dot"></span>Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.5</span>
+                </div>
+                <h3 class="food-card__name">Caesar Salad</h3>
+                <p class="food-card__restaurant">Green Bowl</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$8.99</span>
+                  <button class="food-card__add" aria-label="Add Caesar Salad to cart" onclick="event.stopPropagation(); window.quickAddCart('caesar-salad', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 7: Chocolate Cake -->
+            <article class="food-card clickable reveal" data-food="chocolate-cake" tabindex="0" onclick="window.goFood('chocolate-cake')" role="link" aria-label="Chocolate Cake from Urban Cafe">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="chocolate-cake" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('chocolate-cake', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Cake" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-veg"><span class="dot"></span>Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.8</span>
+                </div>
+                <h3 class="food-card__name">Chocolate Cake</h3>
+                <p class="food-card__restaurant">Urban Café</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$6.99</span>
+                  <button class="food-card__add" aria-label="Add Chocolate Cake to cart" onclick="event.stopPropagation(); window.quickAddCart('chocolate-cake', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Food 8: BBQ Mixed Platter -->
+            <article class="food-card clickable reveal" data-food="bbq-platter" tabindex="0" onclick="window.goFood('bbq-platter')" role="link" aria-label="BBQ Mixed Platter from BBQ Nation">
+              <div class="food-card__image">
+                <span class="offer-badge" style="left:auto;right:64px;background:var(--color-accent);color:var(--text-on-accent)"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Chef's Choice</span>
+                <button class="fav-btn" data-fav-food="bbq-platter" aria-label="Add to favorites" onclick="event.stopPropagation(); window.toggleFavFood('bbq-platter', this)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.pexels.com/photos/9983077/pexels-photo-9983077.jpeg?auto=compress&cs=tinysrgb&w=600" alt="BBQ Mixed Platter" loading="lazy" />
+              </div>
+              <div class="food-card__body">
+                <div class="flex items-center gap-2" style="flex-wrap:wrap">
+                  <span class="diet-badge diet-nonveg"><span class="dot"></span>Non-Veg</span>
+                  <span class="rating-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.7</span>
+                </div>
+                <h3 class="food-card__name">BBQ Mixed Platter</h3>
+                <p class="food-card__restaurant">BBQ Nation</p>
+                <div class="food-card__footer">
+                  <span class="food-card__price">$18.99</span>
+                  <button class="food-card__add" aria-label="Add BBQ Mixed Platter to cart" onclick="event.stopPropagation(); window.quickAddCart('bbq-platter', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
-      <!-- ===== Offers ===== -->
+      <!-- ===== Today's Special Offers ===== -->
       <section class="section">
         <div class="container">
           <div class="section-header reveal">
@@ -158,11 +645,61 @@
               <p class="section-header__subtitle">Save more on the food you love.</p>
             </div>
           </div>
-          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-3" id="offersGrid" style="gap:24px"></div>
+          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-3" style="gap:24px">
+
+            <!-- Offer 1 -->
+            <article class="offer-card reveal">
+              <div class="offer-card__image">
+                <span class="offer-badge">20% OFF</span>
+                <img src="https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="20% Off Your First Order" loading="lazy" />
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">20% Off Your First Order</h3>
+                <p class="offer-card__text">New customers get 20% off on orders above $20.</p>
+                <a class="btn btn-primary btn-sm" href="pages/offers.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Order Now
+                </a>
+              </div>
+            </article>
+
+            <!-- Offer 2 -->
+            <article class="offer-card reveal">
+              <div class="offer-card__image">
+                <span class="offer-badge">FREE DEL</span>
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Free Delivery Today" loading="lazy" />
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Free Delivery Today</h3>
+                <p class="offer-card__text">Enjoy free delivery on all orders, no minimum.</p>
+                <a class="btn btn-primary btn-sm" href="pages/offers.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Order Now
+                </a>
+              </div>
+            </article>
+
+            <!-- Offer 3 -->
+            <article class="offer-card reveal">
+              <div class="offer-card__image">
+                <span class="offer-badge">BOGO</span>
+                <img src="https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Buy 1 Get 1 Free" loading="lazy" />
+              </div>
+              <div class="offer-card__body">
+                <h3 class="offer-card__title">Buy 1 Get 1 Free</h3>
+                <p class="offer-card__text">On selected pizzas and momos this week.</p>
+                <a class="btn btn-primary btn-sm" href="pages/offers.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Order Now
+                </a>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
-      <!-- ===== Features ===== -->
+      <!-- ===== Why Choose FoodFiesta ===== -->
       <section class="section" style="background:var(--color-bg-alt)">
         <div class="container">
           <div class="section-header reveal">
@@ -171,7 +708,41 @@
               <p class="section-header__subtitle">We obsess over every detail so you can just enjoy the food.</p>
             </div>
           </div>
-          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" id="featuresGrid" style="gap:24px"></div>
+          <div class="grid grid-cols-1 grid-md-cols-2 grid-lg-cols-4" style="gap:24px">
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 8h4l3 3v5a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              </div>
+              <h3 class="feature-card__title">Fast Delivery</h3>
+              <p class="feature-card__text">Hot food at your door in 30 minutes or less, guaranteed.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              </div>
+              <h3 class="feature-card__title">Trusted Restaurants</h3>
+              <p class="feature-card__text">Every partner is vetted for quality, hygiene, and consistency.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h3 class="feature-card__title">Secure Ordering</h3>
+              <p class="feature-card__text">Your payments and personal data are always protected.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+              </div>
+              <h3 class="feature-card__title">Fresh Food Every Day</h3>
+              <p class="feature-card__text">Ingredients sourced daily. No shortcuts, no compromises.</p>
+            </article>
+
+          </div>
         </div>
       </section>
 
@@ -184,21 +755,70 @@
               <p class="section-header__subtitle">Real stories from real food lovers.</p>
             </div>
           </div>
-          <div class="grid grid-cols-1 grid-md-cols-3" id="testimonialsGrid" style="gap:24px"></div>
+          <div class="grid grid-cols-1 grid-md-cols-3" style="gap:24px">
+
+            <article class="testimonial-card reveal">
+              <span class="stars">
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+              </span>
+              <p class="testimonial-card__quote">"FoodFiesta has completely changed how I order food. The variety of restaurants and the delivery speed is unmatched. The interface is so easy to use!"</p>
+              <div class="testimonial-card__author">
+                <div class="avatar"><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Sarah Mitchell" loading="lazy" /></div>
+                <div><div class="testimonial-card__name">Sarah Mitchell</div><div class="testimonial-card__meta">Food Blogger</div></div>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="stars">
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+              </span>
+              <p class="testimonial-card__quote">"I order lunch almost every day now. The deals and coupons save me a lot, and the food always arrives hot and fresh. Highly recommended."</p>
+              <div class="testimonial-card__author">
+                <div class="avatar"><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120" alt="James Anderson" loading="lazy" /></div>
+                <div><div class="testimonial-card__name">James Anderson</div><div class="testimonial-card__meta">Software Engineer</div></div>
+              </div>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="stars">
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star filled"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+                <span class="star half"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
+              </span>
+              <p class="testimonial-card__quote">"Great selection of restaurants and the order tracking is super accurate. Love the community reviews — they help me pick the best spots."</p>
+              <div class="testimonial-card__author">
+                <div class="avatar"><img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Priya Sharma" loading="lazy" /></div>
+                <div><div class="testimonial-card__name">Priya Sharma</div><div class="testimonial-card__meta">Marketing Manager</div></div>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
       <!-- ===== Newsletter ===== -->
       <section class="section">
         <div class="container">
-          <div class="newsletter-banner reveal" id="newsletterBanner">
+          <div class="newsletter-banner reveal">
             <div class="newsletter-banner__content">
               <h2 style="font-size:var(--fs-h2);font-weight:700">Hungry for deals?</h2>
               <p style="margin-top:8px;max-width:480px">Join our newsletter for exclusive offers, new restaurant alerts, and foodie inspiration delivered weekly.</p>
             </div>
             <form class="newsletter-banner__form" id="homeNewsletter">
               <div class="search-input search-input--lg">
-                <span class="search-icon" id="newsIcon"></span>
+                <span class="search-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
                 <input class="input" type="email" name="email" placeholder="Enter your email" aria-label="Email address" required />
                 <button class="btn btn-primary" type="submit">Subscribe</button>
               </div>
@@ -214,15 +834,25 @@
         <div class="footer__grid">
           <div class="footer__brand">
             <a class="logo" href="index.html">
-              <span class="logo__mark" id="footerLogo"></span>
+              <span class="logo__mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-1.5 3.5L20 11l1.5-1.5L16 2z"/><path d="M14.5 5.5 19 10l-7 7-2-2 7-7z"/><path d="m8 13-2 2"/><path d="m4 17 3 3"/></svg>
+              </span>
               <span class="logo__text" style="color:#fff">Food<span>Fiesta</span></span>
             </a>
             <p class="footer__desc">Your favorite local restaurants, delivered fast and fresh. Discover delicious food, exclusive deals, and a community of food lovers — all in one place.</p>
             <div class="footer__socials">
-              <a class="footer__social" href="#" aria-label="Facebook" id="socialFb"></a>
-              <a class="footer__social" href="#" aria-label="Twitter" id="socialTw"></a>
-              <a class="footer__social" href="#" aria-label="Instagram" id="socialIg"></a>
-              <a class="footer__social" href="#" aria-label="YouTube" id="socialYt"></a>
+              <a class="footer__social" href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a class="footer__social" href="#" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.1 3 5c1.8 2.5 5 4 8 3.5C10.2 5 14 2.5 17 4.5c1.1 0 3-.5 3-.5z"/></svg>
+              </a>
+              <a class="footer__social" href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a class="footer__social" href="#" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              </a>
             </div>
           </div>
           <div>
@@ -236,22 +866,36 @@
           </div>
           <div>
             <h4 class="footer__title">Contact</h4>
-            <div class="footer__contact-item" id="footerAddr"></div>
-            <div class="footer__contact-item" id="footerPhone"></div>
-            <div class="footer__contact-item" id="footerMail"></div>
-            <div class="footer__contact-item" id="footerClock"></div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>24 Marina Blvd, San Francisco, CA 94123</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (415) 555-0182</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hello@foodfiesta.com</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Open daily 8 AM – 12 AM</span>
+            </div>
           </div>
           <div>
             <h4 class="footer__title">Newsletter</h4>
             <p class="footer__desc" style="margin-top:0;margin-bottom:var(--sp-2)">Get the best deals and new restaurant updates in your inbox.</p>
             <form class="footer__newsletter" id="footerNewsletter">
               <input class="input" type="email" name="email" placeholder="Your email" aria-label="Email address" required />
-              <button class="btn btn-primary" type="submit" aria-label="Subscribe" id="footerNewsBtn"></button>
+              <button class="btn btn-primary" type="submit" aria-label="Subscribe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+              </button>
             </form>
           </div>
         </div>
         <div class="footer__bottom">
-          <span>© 2026 FoodFiesta. Crafted with care. All rights reserved.</span>
+          <span>&copy; 2026 FoodFiesta. Crafted with care. All rights reserved.</span>
           <div class="footer__bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -262,7 +906,6 @@
     </footer>
 
     <!-- ===== Scripts ===== -->
-    <script src="assets/js/data.js"></script>
     <script src="assets/js/icons.js"></script>
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/app.js"></script>
